@@ -1,4 +1,4 @@
-Product.class_eval do
+Spree::Product.class_eval do
   
   def options_of_type(option_type, with_master = false)
     (with_master ? variants_including_master : variants).inject([]) do |opts, var|
